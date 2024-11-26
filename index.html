@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chat UI - File Selector</title>
+    <title>Chat UI - Expandable Sidebar</title>
     <style>
         /* General Styles */
         body {
@@ -28,20 +28,41 @@
             text-align: center;
             margin-bottom: 10px;
         }
-        .sidebar ul {
-            list-style: none;
-            padding: 0;
+        ul {
+            list-style: none; /* Remove default list styling */
+            padding-left: 0;
+            margin: 0;
         }
-        .sidebar ul li {
-            margin: 10px 0;
+        li {
+            padding: 5px;
             cursor: pointer;
         }
+                /* Styles for links inside the sidebar */
         .sidebar ul li a {
-            color: #007bff;
-            text-decoration: none;
+            color: #007bff; /* Set the link color to blue */
+            text-decoration: none; /* Remove underline */
         }
+
         .sidebar ul li a:hover {
-            text-decoration: underline;
+            text-decoration: underline; /* Add underline on hover */
+            color: #0056b3; /* Slightly darker blue on hover */
+        }
+
+        .nested {
+            display: none; /* Hide nested lists by default */
+            margin-left: 20px; /* Indent nested lists */
+        }
+        .nested.active {
+            display: block; /* Show nested lists when active */
+        }
+        .toggle {
+            cursor: pointer;
+            margin-right: 5px;
+            color: #007bff;
+            font-weight: bold;
+        }
+        .toggle:hover {
+            color: #0056b3;
         }
         /* Chat Container Styles */
         .chat-container {
