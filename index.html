@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat UI - Dark Theme</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #121212; /* Dark background */
+            color: #e0e0e0; /* Light text */
+        }
+        .chat-container {
+            width: 50%;
+            margin: 20px auto;
+            border: 1px solid #333; /* Subtle border */
+            background: #1e1e1e; /* Slightly lighter than background */
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+        }
+        .chat-header {
+            background-color: #3a3a3a; /* Darker header */
+            color: #ffffff;
+            padding: 10px;
+            text-align: center;
+            font-size: 18px;
+            border-bottom: 1px solid #333;
+        }
+        .chat-messages {
+            padding: 10px;
+            max-height: 500px;
+            overflow-y: auto;
+        }
+        .chat-message {
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 10px;
+            word-wrap: break-word;
+        }
+        .chat-message.sender {
+            background-color: #007bff; /* Blue for sender */
+            color: white;
+            text-align: left;
+            margin-right: auto;
+            max-width: 80%;
+        }
+        .chat-message.receiver {
+            background-color: #333; /* Gray for receiver */
+            color: white;
+            text-align: right;
+            margin-left: auto;
+            max-width: 80%;
+        }
+        /* Scrollbar Styling */
+        .chat-messages::-webkit-scrollbar {
+            width: 8px;
+        }
+        .chat-messages::-webkit-scrollbar-track {
+            background: #2a2a2a;
+        }
+        .chat-messages::-webkit-scrollbar-thumb {
+            background: #555;
+            border-radius: 4px;
+        }
+        .chat-messages::-webkit-scrollbar-thumb:hover {
+            background: #888;
+        }
+    </style>
+</head>
+<body>
+    <div class="chat-container">
+        <div class="chat-header">Chatroom</div>
+        <div class="chat-messages" id="chatMessages"></div>
+    </div>
+
+    <script src="chat-ui.js"></script>
+</body>
+</html>
